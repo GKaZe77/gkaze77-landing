@@ -1,20 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GKaZe77</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+    }
+
+    window.onload = () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light') document.body.classList.add('light-mode');
+    };
+  </script>
 </head>
 <body>
-  <main>
+  <header>
     <h1>GKaZe77</h1>
-    <p>Welcome to my development space.</p>
-    <div class="links">
-      <a href="https://wordle.gkaze77.com" target="_blank">▶️ Play Wordle</a>
-      <a href="https://github.com/GKaZe77" target="_blank">📁 GitHub</a>
-      <a href="mailto:gkaze77@gmail.com">✉️ Contact Me</a>
+    <p>Developer. Tinkerer. Dreamer.</p>
+    <button id="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
+  </header>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Wordle Clone</h3>
+        <p>Custom-built Wordle game with three unique modes: Regular, Corrupted, and Blueprint.</p>
+        <a href="https://wordle.gkaze77.com" target="_blank">▶️ Play Now</a>
+        <a href="https://github.com/GKaZe77/gkaze77-wordle" target="_blank">📁 GitHub Repo</a>
+      </div>
+      <!-- Add more .project cards as needed -->
     </div>
-  </main>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="https://twitter.com/GKaZe77" target="_blank">🐦 Twitter</a>
+      <a href="https://youtube.com/@GKaZe77" target="_blank">▶️ YouTube</a>
+      <a href="#" target="_blank">📸 Instagram</a>
+      <a href="#" target="_blank">💬 Discord</a>
+    </div>
+    <p>Contact: <a href="mailto:gkaze77@gmail.com">gkaze77@gmail.com</a></p>
+  </footer>
 </body>
 </html>
