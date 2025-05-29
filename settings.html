@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GKaze77 | Home</title>
+  <title>Settings | GKaze77</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
   <header class="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow">
-    <h1 class="text-2xl font-bold text-red-500">GKaze77</h1>
+    <h1 class="text-2xl font-bold text-red-500">Settings</h1>
     <nav class="space-x-4">
       <a href="index.html" class="hover:underline">Home</a>
       <a href="projects.html" class="hover:underline">Projects</a>
@@ -19,9 +19,14 @@
     </nav>
   </header>
 
-  <main class="p-6">
-    <h2 class="text-2xl font-semibold">Welcome</h2>
-    <p class="mt-2">Family. Friends. Fanns. Game devs. Anime nerds. Career recruiters. All are welcome.</p>
+  <main class="p-6 max-w-xl mx-auto">
+    <div class="flex items-center justify-between mb-4">
+      <span>🌗 Dark Mode</span>
+      <button class="px-4 py-2 bg-red-500 text-white rounded" @click="darkMode = !darkMode">
+        Toggle
+      </button>
+    </div>
+    <p class="text-sm text-gray-400">Future settings will go here (e.g., theme picker, music toggle).</p>
   </main>
 </body>
 </html>
