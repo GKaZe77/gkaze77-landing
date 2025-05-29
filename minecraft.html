@@ -1,34 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minecraft | GKaze77</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modded Minecraft Server – GKaze77</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #111;
+      padding: 1em;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 1em;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    .tiers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+
+    .tier {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 1em;
+      flex: 1 1 calc(50% - 1em);
+      border-radius: 8px;
+    }
+
+    .tier ul {
+      padding-left: 1.2em;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e63946;
+      color: white;
+      padding: 0.6em 1em;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 1em;
+    }
+
+    .highlight {
+      background: #f1f1f1;
+      padding: 1em;
+      border-left: 4px solid #222;
+      margin-bottom: 2em;
+    }
+
+    @media (max-width: 768px) {
+      .tier {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-  <header class="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-800 shadow">
-    <h1 class="text-2xl font-bold text-red-500">Minecraft</h1>
-    <nav class="space-x-4">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="projects.html" class="hover:underline">Projects</a>
-      <a href="minecraft.html" class="hover:underline">Minecraft</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="settings.html" class="hover:underline">⚙</a>
-    </nav>
-  </header>
+<body>
 
-<main class="p-6">
-  <h2 class="text-xl font-semibold">Server Info (Coming Soon)</h2>
-  <p class="mt-2 text-gray-400">This section will have info about your modded Minecraft server, connection details, and maybe a store.</p>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/projects.html">Projects</a></li>
+    <li><a href="/minecraft.html" class="active">Minecraft</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-  <div class="mt-4">
-    <p class="text-sm">
-      🔗 Mods available at:
-      <a href="https://www.curseforge.com/members/gkaze77/projects" class="text-blue-400 underline" target="_blank">CurseForge Profile</a>
-    </p>
+<div class="container">
+  <h1>GKaze77's Modded Minecraft Server</h1>
+  <p>Powered by <strong>All The Mods 10</strong> – a fully-loaded modded Minecraft experience including AE2, tech, magic, quests, and more.</p>
+
+  <div class="highlight">
+    <h2>🔗 Modpack Info</h2>
+    <ul>
+      <li><a href="https://www.curseforge.com/minecraft/modpacks/all-the-mods-10" target="_blank">ATM10 on CurseForge</a></li>
+      <li><a href="https://all-themods.com/" target="_blank">Official ATM Website</a></li>
+      <li><a href="https://all-themods.com/beginner-guide/" target="_blank">Beginner Guide: Installing the Modpack</a></li>
+    </ul>
   </div>
-</main>
 
+  <h2>💎 Patreon Access Tiers</h2>
+  <p>Server access is Patreon-gated to help fund infrastructure and ensure performance. Choose your tier below to gain access. All perks are 100% cosmetic or community-based to comply with Mojang’s EULA.</p>
+
+  <div class="tiers">
+    <div class="tier">
+      <h3>🟢 Supporter – $3/month</h3>
+      <ul>
+        <li>Whitelist server access</li>
+        <li>Discord role</li>
+        <li>Access to changelogs & updates</li>
+        <li>Name listed on credits wall</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h3>🔵 Contributor – $6/month</h3>
+      <ul>
+        <li>All Supporter perks</li>
+        <li>Priority join access</li>
+        <li>Community voting rights</li>
+        <li>Colored name in server chat</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h3>🟣 Architect – $9/month</h3>
+      <ul>
+        <li>All Contributor perks</li>
+        <li>Vanity plot in world</li>
+        <li>Help name landmarks or NPCs</li>
+        <li>Architect Discord tag</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h3>🟡 Engineer – $12/month</h3>
+      <ul>
+        <li>All Architect perks</li>
+        <li>Custom statue/banner in hub</li>
+        <li>Listed in MOTD/server screen</li>
+        <li>Access to test builds & backend previews</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <h3>🔴 Server Patron – $24/month <small>(max 3 patrons)</small></h3>
+      <ul>
+        <li>All Engineer perks</li>
+        <li>Sponsor credit in a major hub</li>
+        <li>Annual roadmap call w/ admin</li>
+        <li>Founding supporter tag on site & lore</li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="btn" href="https://patreon.com/YOURPATREON" target="_blank">Join on Patreon</a>
+  <a class="btn" href="https://discord.gg/YOURINVITE" target="_blank">Join our Discord</a>
+
+  <h2>🧰 How to Join</h2>
+  <ol>
+    <li>Become a patron using the link above</li>
+    <li>Join our Discord to get whitelisted</li>
+    <li>Install CurseForge or Prism Launcher</li>
+    <li>Download <strong>All The Mods 10</strong> from CurseForge</li>
+    <li>Launch the pack and connect using the IP provided on Discord</li>
+  </ol>
+
+</div>
 </body>
 </html>
