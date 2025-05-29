@@ -3,186 +3,171 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modded Minecraft Server – GKaze77</title>
+  <title>GKaZe77 Minecraft Server</title>
   <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      line-height: 1.6;
     }
-
-    nav {
-      background: #111;
-      padding: 1em;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
-      margin: 0 1em;
-    }
-
-    nav ul li a {
-      color: white;
+    a {
+      color: #00bfff;
       text-decoration: none;
     }
-
-    nav ul li a.active {
-      font-weight: bold;
+    a:hover {
       text-decoration: underline;
     }
-
+    /* Navigation */
+    nav {
+      background-color: #2c2c2c;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://static.planetminecraft.com/files/image/minecraft/texture-pack/2022/068/15474493-preview-ui-large_l.jpg') center/cover no-repeat;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #fff;
+      text-shadow: 2px 2px #000;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ddd;
+      text-shadow: 1px 1px #000;
+    }
+    /* Main Content */
     .container {
-      max-width: 960px;
-      margin: 2em auto;
-      padding: 0 1em;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-
-    h1, h2, h3 {
-      color: #222;
+    .status {
+      background-color: #2c2c2c;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
     }
-
+    .status h2 {
+      margin-bottom: 1rem;
+    }
+    .status p {
+      margin: 0.5rem 0;
+    }
     .tiers {
       display: flex;
       flex-wrap: wrap;
-      gap: 1em;
+      gap: 1rem;
     }
-
     .tier {
-      background: white;
-      border: 1px solid #ccc;
-      padding: 1em;
-      flex: 1 1 calc(50% - 1em);
+      background-color: #2c2c2c;
+      padding: 1rem;
       border-radius: 8px;
+      flex: 1 1 200px;
     }
-
-    .tier ul {
-      padding-left: 1.2em;
+    .tier h3 {
+      margin-bottom: 0.5rem;
     }
-
-    .btn {
-      display: inline-block;
-      background: #e63946;
-      color: white;
-      padding: 0.6em 1em;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 1em;
+    /* Footer */
+    footer {
+      background-color: #2c2c2c;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
-
-    .highlight {
-      background: #f1f1f1;
-      padding: 1em;
-      border-left: 4px solid #222;
-      margin-bottom: 2em;
-    }
-
-    @media (max-width: 768px) {
-      .tier {
-        flex: 1 1 100%;
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .tiers {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/minecraft.html">Minecraft</a>
+    <a href="https://patreon.com/gkaze77" target="_blank">Patreon</a>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects.html">Projects</a></li>
-    <li><a href="/minecraft.html" class="active">Minecraft</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <section class="hero">
+    <h1>GKaZe77's ATM10 Server</h1>
+    <p>Join our All the Mods 10 (NeoForge 1.21.1) Minecraft server!</p>
+  </section>
 
-<div class="container">
-  <h1>GKaze77's Modded Minecraft Server</h1>
-  <p>Powered by <strong>All The Mods 10</strong> – a fully-loaded modded Minecraft experience including AE2, tech, magic, quests, and more.</p>
+  <div class="container">
+    <section class="status">
+      <h2>Server Status</h2>
+      <p><strong>IP:</strong> mc.gkaze77.com</p>
+      <p><strong>Status:</strong> <span id="server-status">Checking...</span></p>
+      <p><strong>Players:</strong> <span id="player-count">-</span></p>
+      <p><strong>Version:</strong> <span id="server-version">-</span></p>
+    </section>
 
-  <div class="highlight">
-    <h2>🔗 Modpack Info</h2>
-    <ul>
-      <li><a href="https://www.curseforge.com/minecraft/modpacks/all-the-mods-10" target="_blank">ATM10 on CurseForge</a></li>
-      <li><a href="https://all-themods.com/" target="_blank">Official ATM Website</a></li>
-      <li><a href="https://all-themods.com/beginner-guide/" target="_blank">Beginner Guide: Installing the Modpack</a></li>
-    </ul>
+    <section>
+      <h2>Patreon Tiers</h2>
+      <div class="tiers">
+        <div class="tier">
+          <h3>$3 - Supporter</h3>
+          <p>Priority queue access and a special in-game badge.</p>
+        </div>
+        <div class="tier">
+          <h3>$5 - Contributor</h3>
+          <p>Access to exclusive cosmetic items and early feature previews.</p>
+        </div>
+        <div class="tier">
+          <h3>$10 - VIP</h3>
+          <p>Direct input on server development and VIP Discord role.</p>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <h2>💎 Patreon Access Tiers</h2>
-  <p>Server access is Patreon-gated to help fund infrastructure and ensure performance. Choose your tier below to gain access. All perks are 100% cosmetic or community-based to comply with Mojang’s EULA.</p>
+  <footer>
+    <p>&copy; 2025 GKaZe77. All rights reserved.</p>
+  </footer>
 
-  <div class="tiers">
-    <div class="tier">
-      <h3>🟢 Supporter – $3/month</h3>
-      <ul>
-        <li>Whitelist server access</li>
-        <li>Discord role</li>
-        <li>Access to changelogs & updates</li>
-        <li>Name listed on credits wall</li>
-      </ul>
-    </div>
+  <script>
+    // Fetch server status from mcstatus.io API
+    fetch('https://api.mcstatus.io/v2/status/java/mc.gkaze77.com')
+      .then(response => response.json())
+      .then(data => {
+        const statusEl = document.getElementById('server-status');
+        const playerCountEl = document.getElementById('player-count');
+        const versionEl = document.getElementById('server-version');
 
-    <div class="tier">
-      <h3>🔵 Contributor – $6/month</h3>
-      <ul>
-        <li>All Supporter perks</li>
-        <li>Priority join access</li>
-        <li>Community voting rights</li>
-        <li>Colored name in server chat</li>
-      </ul>
-    </div>
-
-    <div class="tier">
-      <h3>🟣 Architect – $9/month</h3>
-      <ul>
-        <li>All Contributor perks</li>
-        <li>Vanity plot in world</li>
-        <li>Help name landmarks or NPCs</li>
-        <li>Architect Discord tag</li>
-      </ul>
-    </div>
-
-    <div class="tier">
-      <h3>🟡 Engineer – $12/month</h3>
-      <ul>
-        <li>All Architect perks</li>
-        <li>Custom statue/banner in hub</li>
-        <li>Listed in MOTD/server screen</li>
-        <li>Access to test builds & backend previews</li>
-      </ul>
-    </div>
-
-    <div class="tier">
-      <h3>🔴 Server Patron – $24/month <small>(max 3 patrons)</small></h3>
-      <ul>
-        <li>All Engineer perks</li>
-        <li>Sponsor credit in a major hub</li>
-        <li>Annual roadmap call w/ admin</li>
-        <li>Founding supporter tag on site & lore</li>
-      </ul>
-    </div>
-  </div>
-
-  <a class="btn" href="https://patreon.com/YOURPATREON" target="_blank">Join on Patreon</a>
-  <a class="btn" href="https://discord.gg/YOURINVITE" target="_blank">Join our Discord</a>
-
-  <h2>🧰 How to Join</h2>
-  <ol>
-    <li>Become a patron using the link above</li>
-    <li>Join our Discord to get whitelisted</li>
-    <li>Install CurseForge or Prism Launcher</li>
-    <li>Download <strong>All The Mods 10</strong> from CurseForge</li>
-    <li>Launch the pack and connect using the IP provided on Discord</li>
-  </ol>
-
-</div>
+        if (data.online) {
+          statusEl.textContent = 'Online';
+          playerCountEl.textContent = `${data.players.online} / ${data.players.max}`;
+          versionEl.textContent = data.version.name_clean;
+        } else {
+          statusEl.textContent = 'Offline';
+          playerCountEl.textContent = '-';
+          versionEl.textContent = '-';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching server status:', error);
+        document.getElementById('server-status').textContent = 'Error';
+      });
+  </script>
 </body>
 </html>
