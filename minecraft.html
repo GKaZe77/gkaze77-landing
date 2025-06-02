@@ -3,46 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GKaZe77 Minecraft Server</title>
+  <title>KazeCraft – GKaZe77 Modded Server</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #eee;
+      background-color: #0f0f11;
+      color: #ccc;
     }
     header {
-      background-color: #111;
+      background-color: #121212;
       padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #333;
+      border-bottom: 1px solid #2a2a2a;
     }
     header nav a {
-      color: #1e90ff;
+      color: #87cefa;
       text-decoration: none;
       margin-left: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
     }
     .hero {
-      background: url("https://gkaze77.com/assets/buttonbanner.png") center/cover no-repeat;
+      background: linear-gradient(to right, #2a2d38, #1a1d26);
       text-align: center;
       padding: 5rem 1rem;
-      color: white;
-      background-color: #222;
+      color: #eee;
     }
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 5px black;
+      font-size: 2.8rem;
+      color: #8dc5f4;
     }
     .hero p {
-      font-size: 1.2rem;
-      opacity: 0.8;
+      font-size: 1.1rem;
+      color: #aaa;
     }
     .container {
       max-width: 960px;
@@ -50,45 +45,39 @@
       padding: 0 1rem;
     }
     .status, .tiers, .install, .youtube {
-      background: #1a1a1a;
+      background: #1c1c22;
+      border: 1px solid #2e2e33;
       border-radius: 8px;
       padding: 1.5rem;
       margin-bottom: 2rem;
     }
     h2 {
       margin-top: 0;
-      color: #1e90ff;
+      color: #8dc5f4;
     }
     .tier-cards {
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .card {
-      background: #222;
-      padding: 1rem;
-      border: 1px solid #333;
+      background: #23232b;
+      border: 1px solid #444;
       border-radius: 6px;
-      text-align: center;
-    }
-    .card.big {
-      grid-column: 1 / -1;
-      background: #2a2a2a;
-      border: 2px solid #555;
+      padding: 1rem;
     }
     .card h3 {
       margin: 0.5rem 0;
-      color: #1e90ff;
+      color: #87cefa;
     }
     .card .price {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
+      color: #aaa;
     }
     .patreon-link {
-      display: flex;
-      justify-content: center;
-      margin-top: 1rem;
+      text-align: center;
+      margin-top: 1.5rem;
     }
     .patreon-link img {
       width: 180px;
@@ -102,9 +91,9 @@
     footer {
       text-align: center;
       padding: 2rem 0;
-      background-color: #111;
-      font-size: 0.9rem;
-      color: #666;
+      background-color: #0e0e0f;
+      font-size: 0.85rem;
+      color: #555;
     }
   </style>
   <script>
@@ -123,7 +112,7 @@
 </head>
 <body>
   <header>
-    <div><strong>GKaZe77</strong></div>
+    <div><strong>KazeCraft</strong></div>
     <nav>
       <a href="/">Home</a>
       <a href="/minecraft">Minecraft</a>
@@ -132,8 +121,8 @@
   </header>
 
   <div class="hero">
-    <h1>GKaZe77's ATM10 Server</h1>
-    <p>Join our All the Mods 10 (NeoForge 1.21.1) Minecraft server!</p>
+    <h1>Welcome to KazeCraft</h1>
+    <p>Powered by FTB Plexiglass Mountain – a unique blend of AE2 tech, magic, and creativity.</p>
   </div>
 
   <main class="container">
@@ -147,29 +136,40 @@
       <h2>Patreon Tiers</h2>
       <div class="tier-cards">
         <div class="card">
-          <h3>Tier 1 – Supporter</h3>
-          <div class="price">$4 / month</div>
-          <p>Basic queue access and in-game tag.</p>
+          <h3>Stone Tier – $3</h3>
+          <div class="price">Cosmetic Supporter</div>
+          <ul>
+            <li>Discord badge + role</li>
+            <li>JourneyMap sync</li>
+            <li>Early patch previews</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Tier 2 – Member</h3>
-          <div class="price">$8 / month</div>
-          <p>Whitelist slot (rotating), early patch access, Discord role.</p>
+          <h3>Iron Tier – $7</h3>
+          <div class="price">QoL & Customizations</div>
+          <ul>
+            <li>Queue priority</li>
+            <li>Custom backpack skins</li>
+            <li>Colored nameplates</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Tier 3 – Warrior</h3>
-          <div class="price">$15 / month</div>
-          <p>Guaranteed slot, Discord vote power, nameplate glow.</p>
+          <h3>Diamond Tier – $15</h3>
+          <div class="price">Utility Perks</div>
+          <ul>
+            <li>3x /home access</li>
+            <li>Custom cosmetic pets</li>
+            <li>Trail & glow effects</li>
+          </ul>
         </div>
         <div class="card">
-          <h3>Tier 4 – Champion</h3>
-          <div class="price">$25 / month</div>
-          <p>Permanent slot, exclusive test builds, feature input rights.</p>
-        </div>
-        <div class="card big">
-          <h3>Tier 5 – Overlord (1 Slot)</h3>
-          <div class="price">$60 / month</div>
-          <p>Exclusive 1-of-1 tier. VIP Discord lounge, immortalized on server hall.</p>
+          <h3>AE2 God Tier – $25</h3>
+          <div class="price">Automation Elite</div>
+          <ul>
+            <li>Creative wireless AE2 terminal</li>
+            <li>Reserved slot access</li>
+            <li>Exclusive trail & aura</li>
+          </ul>
         </div>
       </div>
       <div class="patreon-link">
@@ -180,13 +180,12 @@
     </section>
 
     <section class="install">
-      <h2>Install Help</h2>
-      <p>Install ATM10 from CurseForge or Modrinth:</p>
+      <h2>Modpack Info</h2>
+      <p>This server runs <strong>FTB Plexiglass Mountain</strong> for Minecraft 1.18.2 (Forge 40.1+). Install via:</p>
       <ul>
-        <li><a href="https://www.curseforge.com/minecraft/modpacks/all-the-mods-10" target="_blank">CurseForge – All the Mods 10</a></li>
-        <li><a href="https://modrinth.com/modpack/all-the-mods-10" target="_blank">Modrinth – All the Mods 10</a></li>
+        <li><a href="https://www.feed-the-beast.com/modpacks/96-ftb-plexiglass-mountain" target="_blank">FTB Launcher – Plexiglass Mountain</a></li>
       </ul>
-      <p>Launch using NeoForge 1.21.1. Allocate at least 6–8GB RAM for smooth play.</p>
+      <p>Recommended RAM: 6–8GB. Java 17 required.</p>
     </section>
 
     <section class="youtube">
